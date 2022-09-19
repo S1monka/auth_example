@@ -1,0 +1,46 @@
+name: auth_example
+description: A new Flutter project.
+
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  
+  #Network
+  retrofit: ^3.0.1+1
+  dio: ^4.0.6
+  #DI
+  get_it: ^7.2.0
+  injectable: ^1.5.3
+
+  #Utils
+  equatable: ^2.0.5
+  intl: ^0.17.0
+  
+  #State management
+  flutter_bloc: ^8.1.1
+
+  #Widgets
+  bot_toast: ^4.0.3
+  flutter_svg: ^1.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  retrofit_generator: any
+  injectable_generator: any
+  build_runner: any
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+  
