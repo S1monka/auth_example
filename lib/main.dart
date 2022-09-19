@@ -8,5 +8,5 @@ void main() {
 
   configureInjection();
 
-  runApp(const StartTemplate());
+  runApp(const App());
 }

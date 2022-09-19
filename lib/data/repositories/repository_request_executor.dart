@@ -31,9 +31,9 @@ class RepositoryRequestExecutor {
         throw const ConnectionFailure();
       }
       if (e.response != null) {
-        final reason = (e.response!.data as Map)['reason'];
+        final Map? reason = (e.response!.data as Map)['error'];
         if (reason != null) {
-          throw Failure(reason);
+          throw Failure(reason['message']);
         } else {
           throw ServerFailure(e.response!.statusCode as int);
         }

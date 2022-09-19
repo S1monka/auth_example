@@ -10,7 +10,7 @@ import 'api_service.dart';
 class ApiServiceProvider {
   final Dio _dio;
 
-  static const baseUrl = '';
+  static const baseUrl = 'https://identitytoolkit.googleapis.com/v1/';
 
   ApiServiceProvider(this._dio);
 

@@ -10,9 +10,11 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
 import '../../data/api/api_provider.dart' as _i4;
+import '../../data/repositories/auth_repository.dart' as _i6;
 import '../../data/repositories/repository_request_executor.dart' as _i5;
+import '../../features/auth/bloc/auth_bloc.dart' as _i7;
 import 'modules/remote_module.dart'
-    as _i6; // ignore_for_file: unnecessary_lambdas
+    as _i8; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -25,7 +27,10 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       () => _i4.ApiServiceProvider(get<_i3.Dio>()));
   gh.factory<_i5.RepositoryRequestExecutor>(
       () => _i5.RepositoryRequestExecutor(get<_i4.ApiServiceProvider>()));
+  gh.factory<_i6.AuthRepository>(
+      () => _i6.AuthRepository(get<_i5.RepositoryRequestExecutor>()));
+  gh.factory<_i7.AuthBloc>(() => _i7.AuthBloc(get<_i6.AuthRepository>()));
   return get;
 }
 
-class _$RemoteModule extends _i6.RemoteModule {}
+class _$RemoteModule extends _i8.RemoteModule {}
