@@ -1,5 +1,4 @@
 import 'package:auth_example/features/auth/bloc/auth_bloc.dart';
-import 'package:auth_example/features/auth/ui/auth_screen.dart';
 import 'package:auth_example/core/ui/failure_screen.dart';
 import 'package:auth_example/features/home_screen.dart';
 import 'package:bot_toast/bot_toast.dart';
